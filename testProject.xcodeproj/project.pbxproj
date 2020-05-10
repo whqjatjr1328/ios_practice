@@ -14,6 +14,8 @@
 		841958A12467D48A00252E83 /* testProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958A02467D48A00252E83 /* testProjectTests.swift */; };
 		841958AC2467D48A00252E83 /* testProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958AB2467D48A00252E83 /* testProjectUITests.swift */; };
 		841958BA2467D60500252E83 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958B92467D60500252E83 /* MainViewController.swift */; };
+		841958BD2467EE1B00252E83 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 841958BC2467EE1B00252E83 /* lamp_off.png */; };
+		841958BF2467EE2B00252E83 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 841958BE2467EE2B00252E83 /* lamp_on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		841958AB2467D48A00252E83 /* testProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testProjectUITests.swift; sourceTree = "<group>"; };
 		841958AD2467D48A00252E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841958B92467D60500252E83 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		841958BC2467EE1B00252E83 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		841958BE2467EE2B00252E83 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		841958882467D48900252E83 /* testProject */ = {
 			isa = PBXGroup;
 			children = (
+				841958BB2467EDFE00252E83 /* images */,
 				841958892467D48900252E83 /* AppDelegate.swift */,
 				8419588B2467D48900252E83 /* SceneDelegate.swift */,
 				841958922467D48A00252E83 /* Assets.xcassets */,
@@ -123,6 +128,15 @@
 				841958AD2467D48A00252E83 /* Info.plist */,
 			);
 			path = testProjectUITests;
+			sourceTree = "<group>";
+		};
+		841958BB2467EDFE00252E83 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				841958BE2467EE2B00252E83 /* lamp_on.png */,
+				841958BC2467EE1B00252E83 /* lamp_off.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841958BF2467EE2B00252E83 /* lamp_on.png in Resources */,
+				841958BD2467EE1B00252E83 /* lamp_off.png in Resources */,
 				841958962467D48A00252E83 /* LaunchScreen.storyboard in Resources */,
 				841958932467D48A00252E83 /* Assets.xcassets in Resources */,
 			);
