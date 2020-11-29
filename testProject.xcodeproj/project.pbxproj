@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45556A982573FC45005BC839 /* circleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45556A972573FC45005BC839 /* circleProgressView.swift */; };
 		8419588A2467D48900252E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958892467D48900252E83 /* AppDelegate.swift */; };
 		8419588C2467D48900252E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419588B2467D48900252E83 /* SceneDelegate.swift */; };
 		841958932467D48A00252E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841958922467D48A00252E83 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45556A972573FC45005BC839 /* circleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleProgressView.swift; sourceTree = "<group>"; };
 		841958862467D48900252E83 /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841958892467D48900252E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8419588B2467D48900252E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				841958942467D48A00252E83 /* LaunchScreen.storyboard */,
 				841958972467D48A00252E83 /* Info.plist */,
 				841958B92467D60500252E83 /* MainViewController.swift */,
+				45556A972573FC45005BC839 /* circleProgressView.swift */,
 			);
 			path = testProject;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841958BA2467D60500252E83 /* MainViewController.swift in Sources */,
+				45556A982573FC45005BC839 /* circleProgressView.swift in Sources */,
 				8419588A2467D48900252E83 /* AppDelegate.swift in Sources */,
 				8419588C2467D48900252E83 /* SceneDelegate.swift in Sources */,
 			);
