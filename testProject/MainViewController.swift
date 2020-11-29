@@ -15,8 +15,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let _view = circleProgressVIew(frame: CGRect(x: 30, y: 100, width: 200, height: 200 ))
+        let _view = circleProgressVIew(frame: CGRect(x: 100, y: 400, width: 200, height: 200 ))
+        _view.layer.borderColor = UIColor.red.cgColor
+        _view.layer.borderWidth = 1.0
         animView = _view
+        
         
         let tagGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
         view.addSubview(_view)

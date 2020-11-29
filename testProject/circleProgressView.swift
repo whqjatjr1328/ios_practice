@@ -16,7 +16,7 @@ class circleProgressVIew: UIView {
         super.init(frame: frame)
 //        setupDownloadingCircleLayer()
 //        setupCirclePath()
-        setupCirclePath()
+        setupCirclePath2()
     }
     
     required init?(coder: NSCoder) {
@@ -42,7 +42,7 @@ class circleProgressVIew: UIView {
     func updateProgress(duration: TimeInterval, value: Double = 1.0) {
         let anim = CABasicAnimation(keyPath: "strokeEnd")
         anim.duration = duration
-//        prgressLayer.strokeEnd = CGFloat(value)
+        prgressLayer.strokeEnd = CGFloat(value)
         anim.toValue = value
         anim.fillMode = .forwards
         anim.isRemovedOnCompletion = false
@@ -102,5 +102,20 @@ class circleProgressVIew: UIView {
         for i in 1 ... 101 {
             updateDownloadProgress(baseProgress * Double(i))
         }
+    }
+    
+    func setupCirclePath2() {
+        layoutIfNeeded()
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2.0, y: bounds.height/2.0), radius: self.bounds.height / 2.0, startAngle: -.pi / 2.0, endAngle: .pi * 1.5, clockwise: true)
+        
+        prgressLayer.path = circlePath.cgPath
+        prgressLayer.fillColor = UIColor.clear.cgColor
+        prgressLayer.lineWidth = bounds.height
+        prgressLayer.strokeEnd = 0.0
+        prgressLayer.strokeColor = UIColor.blue.cgColor
+        layer.addSublayer(prgressLayer)
+        
+        self.layer.cornerRadius = self.bounds.height / 2.0
+        self.clipsToBounds = true
     }
 }
