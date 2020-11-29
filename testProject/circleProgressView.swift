@@ -42,11 +42,12 @@ class circleProgressVIew: UIView {
     func updateProgress(duration: TimeInterval, value: Double = 1.0) {
         let anim = CABasicAnimation(keyPath: "strokeEnd")
         if prgressLayer.strokeEnd == 0.0, value == 1.0 {
-            anim.duration = TimeInterval(5)
+            
         } else {
             prgressLayer.strokeEnd = CGFloat(value)
-            anim.duration = TimeInterval(1)
         }
+        anim.duration = 1
+        anim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         anim.toValue = value
         anim.fillMode = .forwards
         anim.isRemovedOnCompletion = false
