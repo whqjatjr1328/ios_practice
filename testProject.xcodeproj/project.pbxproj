@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455AFED225A0412F001695B3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED125A0412F001695B3 /* Alamofire.framework */; };
+		455AFED425A04136001695B3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED325A04136001695B3 /* Masonry.framework */; };
+		455AFED625A0413B001695B3 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED525A0413B001695B3 /* SnapKit.framework */; };
 		8419588A2467D48900252E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958892467D48900252E83 /* AppDelegate.swift */; };
 		8419588C2467D48900252E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419588B2467D48900252E83 /* SceneDelegate.swift */; };
 		841958932467D48A00252E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841958922467D48A00252E83 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		455AFED125A0412F001695B3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		455AFED325A04136001695B3 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
+		455AFED525A0413B001695B3 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		841958862467D48900252E83 /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841958892467D48900252E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8419588B2467D48900252E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455AFED225A0412F001695B3 /* Alamofire.framework in Frameworks */,
+				455AFED425A04136001695B3 /* Masonry.framework in Frameworks */,
+				455AFED625A0413B001695B3 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455AFED025A0412F001695B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				455AFED525A0413B001695B3 /* SnapKit.framework */,
+				455AFED325A04136001695B3 /* Masonry.framework */,
+				455AFED125A0412F001695B3 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8419587D2467D48900252E83 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,7 @@
 				8419589F2467D48A00252E83 /* testProjectTests */,
 				841958AA2467D48A00252E83 /* testProjectUITests */,
 				841958872467D48900252E83 /* Products */,
+				455AFED025A0412F001695B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +155,7 @@
 				841958822467D48900252E83 /* Sources */,
 				841958832467D48900252E83 /* Frameworks */,
 				841958842467D48900252E83 /* Resources */,
+				455AFEFB25A04215001695B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +270,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		455AFEFB25A04215001695B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Masonry.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		841958822467D48900252E83 /* Sources */ = {
@@ -424,6 +468,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QL8Z974T3C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QL8Z974T3C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
