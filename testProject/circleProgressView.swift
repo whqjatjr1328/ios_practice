@@ -51,7 +51,21 @@ class circleProgressVIew: UIView {
         anim.toValue = value
         anim.fillMode = .forwards
         anim.isRemovedOnCompletion = false
-        prgressLayer.add(anim, forKey: "progress")
+        prgressLayer.add(anim, forKey: "strokeEnd")
+    }
+    
+    func updateProcessInstantly(value: Double = 1.0) {
+        let anim = CABasicAnimation(keyPath: "strokeEnd")
+        if prgressLayer.strokeEnd == 0.0, value == 1.0 {
+            
+        } else {
+            prgressLayer.strokeEnd = CGFloat(value)
+        }
+        anim.duration = 0
+        anim.toValue = value
+        anim.fillMode = .forwards
+        anim.isRemovedOnCompletion = false
+        prgressLayer.add(anim, forKey: "strokeEnd")
     }
     
     func updateDownloadProgress(_ progress: Double) {

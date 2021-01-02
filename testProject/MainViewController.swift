@@ -75,10 +75,11 @@ class MainViewController: UIViewController {
             animView?.updateProgress(duration: TimeInterval(1), value: progress)
         } else if sender == button2 {
             progress = 1.0
-            animView?.updateProgress(duration: TimeInterval(100), value: progress)
+//            animView?.prgressLayer.strokeEnd = 1.0
+            animView?.updateProgress(duration: TimeInterval(1), value: progress)
         } else if sender == button3 {
-            progress = 0
-            animView?.updateProgress(duration: TimeInterval(5), value: progress)
+            progress = 0.5
+            animView?.updateProcessInstantly(value: progress)
         }
     }
     
