@@ -10,6 +10,8 @@
 		455AFED225A0412F001695B3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED125A0412F001695B3 /* Alamofire.framework */; };
 		455AFED425A04136001695B3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED325A04136001695B3 /* Masonry.framework */; };
 		455AFED625A0413B001695B3 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455AFED525A0413B001695B3 /* SnapKit.framework */; };
+		455AFF3625A050B9001695B3 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 455AFF3425A050B9001695B3 /* lamp_on.png */; };
+		455AFF3725A050B9001695B3 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 455AFF3525A050B9001695B3 /* lamp_off.png */; };
 		8419588A2467D48900252E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841958892467D48900252E83 /* AppDelegate.swift */; };
 		8419588C2467D48900252E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419588B2467D48900252E83 /* SceneDelegate.swift */; };
 		841958932467D48A00252E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841958922467D48A00252E83 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		455AFED125A0412F001695B3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		455AFED325A04136001695B3 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		455AFED525A0413B001695B3 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		455AFF3425A050B9001695B3 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
+		455AFF3525A050B9001695B3 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
 		841958862467D48900252E83 /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841958892467D48900252E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8419588B2467D48900252E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				841958942467D48A00252E83 /* LaunchScreen.storyboard */,
 				841958972467D48A00252E83 /* Info.plist */,
 				841958B92467D60500252E83 /* MainViewController.swift */,
+				455AFF3525A050B9001695B3 /* lamp_off.png */,
+				455AFF3425A050B9001695B3 /* lamp_on.png */,
 			);
 			path = testProject;
 			sourceTree = "<group>";
@@ -252,6 +258,8 @@
 			files = (
 				841958962467D48A00252E83 /* LaunchScreen.storyboard in Resources */,
 				841958932467D48A00252E83 /* Assets.xcassets in Resources */,
+				455AFF3625A050B9001695B3 /* lamp_on.png in Resources */,
+				455AFF3725A050B9001695B3 /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
