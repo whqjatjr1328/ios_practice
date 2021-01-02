@@ -13,6 +13,10 @@ class MainViewController: UIViewController {
     
     let offImage: UIImage? = UIImage(named: "lamp_off.png")
     let onImage: UIImage? = UIImage(named: "lamp_on.png")
+    
+    let numOfPictures: Int = 6
+    var currentPictureIdx: Int = 0
+    
     var isEnlarged: Bool = false
     let imageView: UIImageView = {
         let imageview = UIImageView()
@@ -21,6 +25,9 @@ class MainViewController: UIViewController {
     }()
     let enlargeButton: UIButton = UIButton()
     let onOffSwitch: UISwitch = UISwitch()
+    
+    let nextBtn: UIButton = UIButton()
+    let prevBtn: UIButton = UIButton()
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -63,6 +70,27 @@ class MainViewController: UIViewController {
             make.centerY.equalTo(enlargeButton.snp.centerY)
             make.centerX.equalToSuperview().offset(50)
         }
+        
+        nextBtn.setTitle("next", for: .normal)
+        nextBtn.setTitleColor(.black, for: .normal)
+        nextBtn.addTarget(self, action: #selector(prevNextBtnTapped(_:)), for: .touchUpInside)
+        view.addSubview(nextBtn)
+        nextBtn.snp.makeConstraints { make in
+            make.centerY.equalTo(enlargeButton)
+            make.right.equalToSuperview().offset(-30)
+        }
+        
+        prevBtn.setTitle("prev", for: .normal)
+        prevBtn.setTitleColor(.black, for: .normal)
+        prevBtn.addTarget(self, action: #selector(prevNextBtnTapped(_:)), for: .touchUpInside)
+        view.addSubview(prevBtn)
+        prevBtn.snp.makeConstraints { make in
+            make.centerY.equalTo(enlargeButton)
+            make.left.equalToSuperview().offset(30)
+        }
+        
+        imageView.image = UIImage(named: "1.png")
+        
     }
     
     @objc
@@ -77,6 +105,17 @@ class MainViewController: UIViewController {
         imageView.snp.updateConstraints { make in
             make.width.height.equalTo(witdh)
         }
+    }
+    
+    @objc
+    func prevNextBtnTapped(_ sender: UIButton) {
+        if sender == nextBtn {
+            currentPictureIdx = (currentPictureIdx + 1) % numOfPictures
+        } else {
+            currentPictureIdx = (currentPictureIdx - 1 + numOfPictures) % numOfPictures
+        }
+        
+        imageView.image = UIImage(named: String(currentPictureIdx + 1) + ".png")
     }
     
 
